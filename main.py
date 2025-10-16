@@ -59,10 +59,11 @@ while True:
     print('5. Desordenar lista')
     print('6. Salir')
 
-    option = input('Ingrese la opción deseada: ')
+    option = input('Seleccione la opción o método por el cual desea ordenar: ')
 
     match option:
         case '1':
+            print("Bubble Sort: ")
             if not esta_ordenada(lista):
                 print('Lista desordenada:')
                 print(lista)
@@ -73,6 +74,7 @@ while True:
                 print('La lista ya está ordenada.')
 
         case '2':
+            print("Selection Sort: ")
             if not esta_ordenada(lista):
                 print('Lista desordenada:')
                 print(lista)
@@ -84,6 +86,7 @@ while True:
 
 
         case '3':
+            print("Quick Sort: ")
             if not esta_ordenada(lista):
                 print('Lista desordenada:')
                 print(lista)
@@ -94,6 +97,7 @@ while True:
                 print('La lista ya está ordenada.')
 
         case '4':
+            print("Bogo Sort: ")
             if not esta_ordenada(lista):
                 print('Lista desordenada:')
                 print(lista)
