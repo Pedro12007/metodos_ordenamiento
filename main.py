@@ -1,10 +1,11 @@
 import random
+
 n = int(input('¿Cuántos números desea ingresar?: '))
 
 lista = []
 
 for i in range(n):
-    num = int(input(f'{i+1}. Ingrese un número: '))
+    num = random.randint(1, 100)
     lista.append(num)
 
 def bubble_sort(lista):
