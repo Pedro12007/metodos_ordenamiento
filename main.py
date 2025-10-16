@@ -25,7 +25,6 @@ def quick_sort(lista):
 
         return quick_sort(menores) + iguales + quick_sort(mayores)
 
-def selection_sort():
 def selection_sort(lista):
     for i in range (len(lista)):
         min_index = i
@@ -62,14 +61,16 @@ while True:
             print(lista)
 
         case '2':
-            pass
+            selection_sort(lista)
+            print(lista)
 
         case '3':
             lista = quick_sort(lista)
             print(lista)
 
         case '4':
-            pass
+            bogo_sort(lista)
+            print(lista)
 
         case '5':
             pass
