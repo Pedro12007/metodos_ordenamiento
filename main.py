@@ -45,6 +45,11 @@ def bogo_sort(lista):
     print(f"Ordenada después de {intentos} intentos")
     return lista
 
+def desordenar(lista):
+    while not esta_ordenada(lista):
+        random.shuffle(lista)
+    return lista
+
 while True:
     print('Opciones: ')
     print('1. Bubble Sort')
@@ -74,7 +79,8 @@ while True:
             print(lista)
 
         case '5':
-            pass
+            desordenar(lista)
+            print(f"Lista desordenada nuevamente: {lista}")
 
         case '6':
             print('Saliendo del programa...')
