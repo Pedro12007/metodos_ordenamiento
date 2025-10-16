@@ -46,7 +46,7 @@ def bogo_sort(lista):
     return lista
 
 def desordenar(lista):
-    while not esta_ordenada(lista):
+    while esta_ordenada(lista):
         random.shuffle(lista)
     return lista
 
