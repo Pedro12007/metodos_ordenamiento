@@ -6,6 +6,24 @@ for i in range(n):
     num = int(input(f'{i+1}. Ingrese un número: '))
     lista.append(num)
 
+def bubble_sort(lista):
+    for i in range(len(lista) - 1):
+        for j in range(len(lista) - 1 - i):
+            if lista[j] > lista[j + 1]:
+                lista[j], lista[j + 1] = lista[j + 1], lista[j]
+
+def quick_sort(lista):
+    if len(lista) <= 1:
+        return lista
+    else:
+        pivot = lista[len(lista) // 2]
+
+        menores = [x for x in lista if x < pivot]
+        iguales = [x for x in lista if x == pivot]
+        mayores = [x for x in lista if x > pivot]
+
+        return quick_sort(menores) + iguales + quick_sort(mayores)
+
 def selection_sort():
     for i in range (len(lista)):
         min_index = i
@@ -27,13 +45,15 @@ while True:
 
     match option:
         case '1':
-            pass
+            bubble_sort(lista)
+            print(lista)
 
         case '2':
             pass
 
         case '3':
-            pass
+            lista = quick_sort(lista)
+            print(lista)
 
         case '4':
             pass
