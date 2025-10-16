@@ -63,20 +63,45 @@ while True:
 
     match option:
         case '1':
-            bubble_sort(lista)
-            print(lista)
+            if not esta_ordenada(lista):
+                print('Lista desordenada:')
+                print(lista)
+                bubble_sort(lista)
+                print('Lista ordenada:')
+                print(lista)
+            else:
+                print('La lista ya está ordenada.')
 
         case '2':
-            selection_sort(lista)
-            print(lista)
+            if not esta_ordenada(lista):
+                print('Lista desordenada:')
+                print(lista)
+                selection_sort(lista)
+                print('Lista ordenada:')
+                print(lista)
+            else:
+                print('La lista ya está ordenada.')
+
 
         case '3':
-            lista = quick_sort(lista)
-            print(lista)
+            if not esta_ordenada(lista):
+                print('Lista desordenada:')
+                print(lista)
+                lista = quick_sort(lista)
+                print('Lista ordenada:')
+                print(lista)
+            else:
+                print('La lista ya está ordenada.')
 
         case '4':
-            bogo_sort(lista)
-            print(lista)
+            if not esta_ordenada(lista):
+                print('Lista desordenada:')
+                print(lista)
+                bogo_sort(lista)
+                print('Lista ordenada:')
+                print(lista)
+            else:
+                print('La lista ya está ordenada.')
 
         case '5':
             desordenar(lista)
